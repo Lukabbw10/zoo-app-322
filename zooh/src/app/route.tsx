@@ -1,7 +1,7 @@
 import { useLocalSearchParams } from "expo-router";
 import { ScrollView, StyleSheet, Text } from "react-native";
-import { abstand, farben } from "@/app/theme";
-import { Platzhalter } from "@/app/components/platzhalter";
+import { abstand, farben } from "@/theme";
+import { Platzhalter } from "@/components/platzhalter";
 
 export default function RouteScreen() {
   const { ziel } = useLocalSearchParams<{ ziel?: string }>();

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { abstand, farben } from "@/app/theme";
+import { abstand, farben } from "@/theme";
 
 type Props = { label: string; hoehe?: number };
 

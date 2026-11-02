@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ScrollView, StyleSheet, Text } from "react-native";
-import { abstand, farben } from "@/app/theme";
-import { Feld } from "@/app/components/feld";
-import { PrimaerButton } from "@/app/components/primaer-button";
+import { abstand, farben } from "@/theme";
+import { Feld } from "@/components/feld";
+import { PrimaerButton } from "@/components/primaer-button";
 
 export default function LoginScreen() {
   const [email, setEmail] = useState("");

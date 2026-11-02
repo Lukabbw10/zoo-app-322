@@ -1,6 +1,6 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import type { TextInputProps } from "react-native";
-import { abstand, farben } from "@/app/theme";
+import { abstand, farben } from "@/theme";
 
 type Props = TextInputProps & { label: string; fehler?: string };
 

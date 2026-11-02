@@ -1,8 +1,8 @@
 import { useRouter } from "expo-router";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { abstand, farben } from "@/app/theme";
-import { Platzhalter } from "@/app/components/platzhalter";
-import { PrimaerButton } from "@/app/components/primaer-button";
+import { abstand, farben } from "@/theme";
+import { Platzhalter } from "@/components/platzhalter";
+import { PrimaerButton } from "@/components/primaer-button";
 
 export default function EventsScreen() {
   const router = useRouter();

@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, Text } from "react-native";
-import { abstand, farben } from "@/app/theme";
+import { abstand, farben } from "@/theme";
 
 type Props = { titel: string; onPress: () => void; deaktiviert?: boolean };
 
