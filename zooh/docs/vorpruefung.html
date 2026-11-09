@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Zooh! Vorprüfung und Hallway-Vorlage</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: #1a1a1a;
+        max-width: 1000px;
+        margin: 32px auto;
+        padding: 0 20px;
+        font-size: 13px;
+      }
+      h1 {
+        font-size: 23px;
+      }
+      h2 {
+        font-size: 17px;
+        margin-top: 24px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #888;
+        padding: 6px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #eee;
+      }
+      tr {
+        break-inside: avoid;
+      }
+      .hinweis {
+        border-left: 4px solid #777;
+        padding: 8px 12px;
+        background: #f3f3f3;
+      }
+      @media print {
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        h2 {
+          break-after: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Zooh! Vorprüfung und Hallway-Vorlage</h1>
+    <p class="hinweis">
+      <strong>Entwurf:</strong> Dies ist eine technische Vorprüfung des eigenen
+      Prototyps, kein Expert Review durch die Nachbargruppe und kein
+      durchgeführter Hallway-Test. Bewertungen sind vorläufig und müssen im
+      Gruppentest überprüft werden.
+    </p>
+    <h2>Vorläufige Befunde, nach Schweregrad</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Grad</th>
+          <th>Prinzip</th>
+          <th>Screen</th>
+          <th>Befund und Vorschlag</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>4</td>
+          <td>Aufgabenangemessenheit</td>
+          <td>Events</td>
+          <td>
+            Die Uhrzeiten sind Beispiele; echte Zoo-Events können damit nicht
+            zuverlässig gefunden werden. Eine verlässliche Event-Datenquelle
+            anbinden.
+          </td>
+          <td>Offen: Datenquelle erforderlich.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Aufgabenangemessenheit</td>
+          <td>Navigation</td>
+          <td>
+            Die angezeigte Route ist ein Platzhalter und führt nicht wirklich
+            zum Ziel. Eine Fusswegrouten-Datenquelle ergänzen.
+          </td>
+          <td>Offen: Wegdaten erforderlich.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Erwartungskonformität</td>
+          <td>Karte</td>
+          <td>
+            Filter und Suche ändern die Ortsliste, aber nicht die Karten-Pins.
+            Verifizierte Orte mit Koordinaten und filterbaren Markierungen
+            ergänzen.
+          </td>
+          <td>Offen: geprüfte Standortdaten erforderlich.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Fehlertoleranz</td>
+          <td>Events</td>
+          <td>
+            Der frühere Erinnerungsschalter zeigte einen Zustand, plante aber
+            keine Benachrichtigung. Lokale Erinnerung einrichten und bei
+            verweigerter Berechtigung informieren.
+          </td>
+          <td>Umgesetzt; Browser getestet, Smartphone-Test offen.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Selbstbeschreibungsfähigkeit</td>
+          <td>Karte</td>
+          <td>
+            Die frühere Kartenfläche war nur ein Platzhalter. Eine echte
+            Online-Kartenansicht anzeigen.
+          </td>
+          <td>Umgesetzt; Browser getestet, Smartphone-Test offen.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Erwartungskonformität</td>
+          <td>Events</td>
+          <td>
+            Im Browser kann eine Erinnerung bei geschlossener Seite nicht
+            auslösen. Den Unterschied anzeigen und später Web-Push mit Server
+            prüfen.
+          </td>
+          <td>Hinweis umgesetzt; Web-Push offen.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Selbstbeschreibungsfähigkeit</td>
+          <td>Karte</td>
+          <td>
+            Ein fester Text «in 15 Min.» war unabhängig von der Uhrzeit. Den
+            Zeitraum aus der Beispielzeit berechnen.
+          </td>
+          <td>Umgesetzt und im Browser geprüft.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Steuerbarkeit</td>
+          <td>Karte</td>
+          <td>
+            Der Standort war nicht abrufbar. Eine freiwillige Standortabfrage
+            mit Rückmeldung und Fehlerzustand ergänzen.
+          </td>
+          <td>Umgesetzt; im Browser mit simuliertem Standort geprüft.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Hallway-Test: noch durchzuführen</h2>
+    <p>
+      <strong>Szenario:</strong> Sie sind im Zoo, möchten zur
+      Elefanten-Fütterung und davor erinnert werden. Finden Sie das Event und
+      richten Sie eine Erinnerung ein.
+    </p>
+    <p>
+      Rolle und Altersgruppe: ____________________ &nbsp; Datum:
+      ____________________
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Zeit</th>
+          <th>Screen</th>
+          <th>Beobachtung</th>
+          <th>Wörtliches Zitat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&nbsp;</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Nachfragen: Was hat gestört? Was hat gefehlt? Was war gut? Keine Namen
+      notieren. Befunde und Schweregrade nach dem Test ergänzen.
+    </p>
+    <h2>Hypothesen aus dem Board</h2>
+    <ul>
+      <li>
+        Route: Mindestens 4 von 5 Personen finden «Route starten» beim ersten
+        Versuch ohne Hinweis.
+      </li>
+      <li>
+        Erinnerung: Mindestens 3 von 5 Personen aktivieren die Erinnerung in der
+        Eventansicht.
+      </li>
+      <li>
+        Gastzugang: Die Karte öffnet sich ohne Konto. Die ursprüngliche
+        Hypothese zur Wahl «Als Gast fortfahren» lässt sich mit dem direkten
+        Einstieg nicht mehr unverändert prüfen.
+      </li>
+    </ul>
+  </body>
+</html>

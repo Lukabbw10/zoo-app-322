@@ -26,6 +26,13 @@
     "plugins": [
       "expo-router",
       [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Zooh! zeigt deinen Standort auf der Karte."
+        }
+      ],
+      ["expo-notifications", { "enableRemoteNotifications": false }],
+      [
         "expo-splash-screen",
         {
           "backgroundColor": "#208AEF",

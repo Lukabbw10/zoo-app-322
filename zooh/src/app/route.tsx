@@ -1,26 +1,41 @@
-import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import { ScrollView, StyleSheet, Text } from "react-native";
 import { abstand, farben } from "@/theme";
 import { Platzhalter } from "@/components/platzhalter";
+import { PrimaerButton } from "@/components/primaer-button";
 
 export default function RouteScreen() {
-  const { ziel } = useLocalSearchParams<{ ziel?: string }>();
-  const zielName = ziel || "Ausgewähltes Gehege";
+  const router = useRouter();
+  const { ziel, erinnerung } = useLocalSearchParams<{
+    ziel?: string;
+    erinnerung?: string;
+  }>();
+  const zielName = typeof ziel === "string" ? ziel : undefined;
 
   return (
     <ScrollView contentContainerStyle={styles.inhalt}>
-      <Text style={styles.zielText}>Ziel: {zielName}</Text>
-      <Text style={styles.text}>
-        Zweck: Fussgänger-Navigation Schritt-für-Schritt
+      <Text style={styles.zielText}>
+        {zielName ? `Ziel: ${zielName}` : "Navigation"}
       </Text>
-      <Platzhalter
-        label={`🚶 Route anzeigen von 'Mein Standort' -> ${zielName}`}
-        hoehe={220}
-      />
-      <Platzhalter
-        label="Anweisung: In 50m links abbiegen Richtung Masoala Halle"
-        hoehe={80}
-      />
+      {zielName ? (
+        <>
+          <Platzhalter
+            label={`Beispielroute vom Eingang zu ${zielName}`}
+            hoehe={220}
+          />
+          <Text style={styles.text}>Start: Eingang (Beispielstandort)</Text>
+          {erinnerung === "aktiv" || erinnerung === "aus" ? (
+            <Text style={styles.text}>Erinnerung: {erinnerung}</Text>
+          ) : null}
+          <Text style={styles.text}>Die Karte zeigt eine Beispielroute.</Text>
+        </>
+      ) : (
+        <>
+          <Platzhalter label="Hier erscheint deine Route" hoehe={220} />
+          <Text style={styles.text}>Wähle zuerst ein Ziel auf der Karte.</Text>
+        </>
+      )}
+      <PrimaerButton titel="Zur Karte" onPress={() => router.replace("/")} />
     </ScrollView>
   );
 }
